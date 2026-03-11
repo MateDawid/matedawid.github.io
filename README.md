@@ -2,8 +2,12 @@
 
 ## Deploying new version
 
-1. Build new version with command
+1. Pre deployment checks:
+```bash
+yarn tsc
+```
+2. Build new version with command
 ```bash
 yarn deploy-local
 ```
-2. Commit and push changes
+3. Commit and push changes
