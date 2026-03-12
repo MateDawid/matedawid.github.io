@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   Container,
@@ -7,6 +6,7 @@ import {
   Link,
   Typography,
 } from "@mui/material";
+import React from "react";
 
 function SectionTitle({ children }: { children: React.ReactNode }) {
   return (
@@ -52,7 +52,7 @@ function App() {
       {/* MAIN GRID */}
       <Grid container spacing={6}>
         {/* LEFT COLUMN */}
-        <Grid size={8}>
+        <Grid size={9}>
           <SectionTitle>Work Experience</SectionTitle>
 
           {/* Job 1 */}
@@ -107,38 +107,7 @@ function App() {
             </ul>
           </Box>
 
-          {/* Project 2 */}
-          <Box mb={3}>
-            <Typography fontWeight={600}>
-              <Link href="#">My Second Project</Link>
-            </Typography>
-            <Typography variant="body2" sx={{ mt: 1 }}>
-              Short summary about my second project
-            </Typography>
-
-            <ul>
-              <li>First Highlight of Project Two</li>
-              <li>Second Highlight of Project Two</li>
-              <li>Third Highlight of Project Two</li>
-            </ul>
-          </Box>
-        </Grid>
-
-        {/* RIGHT COLUMN */}
-        <Grid size={4}>
-          <SectionTitle>Languages</SectionTitle>
-
-          <Box mb={5}>
-            <Typography fontWeight={600}>English</Typography>
-            <Typography variant="body2">Native speaker</Typography>
-
-            <Typography fontWeight={600} sx={{ mt: 2 }}>
-              American Sign Language
-            </Typography>
-            <Typography variant="body2">Professional Working Proficiency</Typography>
-          </Box>
-
-          <SectionTitle>Volunteer Experience</SectionTitle>
+                    <SectionTitle>Education?</SectionTitle>
 
           {/* Volunteer 1 */}
           <Box mb={3}>
@@ -172,6 +141,37 @@ function App() {
               <li>Second Duty of Previous Organization</li>
               <li>Third Duty of Previous Organization</li>
             </ul>
+          </Box>
+
+          {/* Project 2 */}
+          <Box mb={3}>
+            <Typography fontWeight={600}>
+              <Link href="#">My Second Project</Link>
+            </Typography>
+            <Typography variant="body2" sx={{ mt: 1 }}>
+              Short summary about my second project
+            </Typography>
+
+            <ul>
+              <li>First Highlight of Project Two</li>
+              <li>Second Highlight of Project Two</li>
+              <li>Third Highlight of Project Two</li>
+            </ul>
+          </Box>
+        </Grid>
+
+        {/* RIGHT COLUMN */}
+        <Grid size={3}>
+          <SectionTitle>Skills?</SectionTitle>
+
+          <Box mb={5}>
+            <Typography fontWeight={600}>English</Typography>
+            <Typography variant="body2">Native speaker</Typography>
+
+            <Typography fontWeight={600} sx={{ mt: 2 }}>
+              American Sign Language
+            </Typography>
+            <Typography variant="body2">Professional Working Proficiency</Typography>
           </Box>
         </Grid>
       </Grid>

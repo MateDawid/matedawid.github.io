@@ -1,6 +1,7 @@
 {
   "name": "matedawid.github.io",
   "homepage": "https://matedawid.github.io/",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -22,7 +23,10 @@
     "build": "react-scripts build",
     "deploy-local": "yarn build && xcopy build . /E /I /Y",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix"
+
   },
   "eslintConfig": {
     "extends": [
@@ -43,8 +47,14 @@
     ]
   },
   "devDependencies": {
+    "@eslint/js": "^10",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "typescript": "^5.9.3"
+    "eslint": "^10",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "globals": "^15",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.57.0"
   }
 }
