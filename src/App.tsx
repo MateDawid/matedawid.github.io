@@ -6,24 +6,7 @@ import {
   Link,
   Typography,
 } from "@mui/material";
-import React from "react";
-
-function SectionTitle({ children }: { children: React.ReactNode }) {
-  return (
-    <Typography
-      variant="h6"
-      sx={{
-        textTransform: "uppercase",
-        textAlign: "center",
-        fontWeight: 600,
-        mt: 4,
-        mb: 2,
-      }}
-    >
-      {children}
-    </Typography>
-  );
-}
+import { SectionTitle } from "./components/SectionTitle";
 
 function App() {
   return (
@@ -44,11 +27,6 @@ function App() {
         <Typography variant="body2" sx={{ mt: 2, maxWidth: 600, mx: "auto" }}> A short summary of who you are, your background, experience, and  interests to give visitors a quick introduction to you.
         </Typography>
       </Box>
-
-
-
-
-
 
       <Divider sx={{ my: 4 }} />
 
