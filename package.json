@@ -22,7 +22,9 @@
     "build": "set BUILD_PATH=./docs && react-scripts build",
     "deploy-local": "yarn build && xcopy build . /E /I /Y",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prettier:check": "npx prettier . --check",
+    "prettier:fix": "npx prettier . --write"
   },
   "eslintConfig": {
     "extends": [
@@ -45,6 +47,7 @@
   "devDependencies": {
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "prettier": "^3.8.1",
     "typescript": "^5.9.3"
   }
 }
