@@ -7,7 +7,7 @@ function App() {
       {/* HEADER */}
       <Box textAlign="center">
         <Typography variant="h4" fontWeight={700}>
-          YOUR NAME
+          MY NAME
         </Typography>
 
         <Typography variant="body1" sx={{ mt: 1 }}>
