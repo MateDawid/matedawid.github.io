@@ -41,11 +41,14 @@ function App() {
           · 123‑456‑7890 · City, State, Country
         </Typography>
 
-        <Typography variant="body2" sx={{ mt: 2, maxWidth: 600, mx: "auto" }}>
-          A short summary of who you are, your background, experience, and 
-          interests to give visitors a quick introduction to you.
+        <Typography variant="body2" sx={{ mt: 2, maxWidth: 600, mx: "auto" }}> A short summary of who you are, your background, experience, and  interests to give visitors a quick introduction to you.
         </Typography>
       </Box>
+
+
+
+
+
 
       <Divider sx={{ my: 4 }} />
 
