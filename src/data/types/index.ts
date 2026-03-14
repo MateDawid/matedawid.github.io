@@ -1,1 +1,1 @@
-export { type HeaderSectionData } from './HeaderSectionData';
+export { type HeaderSectionData } from "./HeaderSectionData";

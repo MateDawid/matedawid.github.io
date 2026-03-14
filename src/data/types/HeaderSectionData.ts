@@ -1,4 +1,3 @@
-
 export type HeaderSectionData = {
   name: string;
   position: string;
