@@ -1,7 +1,7 @@
 import { Box, Typography } from "@mui/material";
-import { SectionTitle } from "../components";
+import { SectionTitle } from "../../../components";
 
-export function SideSection() {
+export function SkillsSubsection() {
   return (
     <>
       <SectionTitle>Skills?</SectionTitle>
