@@ -1,31 +1,12 @@
 import { Box, Container, Divider, Grid, Link, Typography } from "@mui/material";
 import { SectionTitle } from "./components/SectionTitle";
+import { HeaderSection } from "./sections/HeaderSection";
 
 function App() {
   return (
     <Container maxWidth="lg" sx={{ py: 4 }}>
-      {/* HEADER */}
-      <Box textAlign="center">
-        <Typography variant="h4" fontWeight={700}>
-          MY NAME
-        </Typography>
-
-        <Typography variant="body1" sx={{ mt: 1 }}>
-          <Link href="mailto:First.Last@example.com">
-            First.Last@example.com
-          </Link>{" "}
-          · 123‑456‑7890 · City, State, Country
-        </Typography>
-
-        <Typography variant="body2" sx={{ mt: 2, maxWidth: 600, mx: "auto" }}>
-          {" "}
-          A short summary of who you are, your background, experience, and
-          interests to give visitors a quick introduction to you.
-        </Typography>
-      </Box>
-
+      <HeaderSection/>
       <Divider sx={{ my: 4 }} />
-
       {/* MAIN GRID */}
       <Grid container spacing={6}>
         {/* LEFT COLUMN */}
