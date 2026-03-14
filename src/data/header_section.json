@@ -1,0 +1,11 @@
+{
+  "name": "Dawid Mateusiak",
+  "image": "/media/personal_photo.jpg",
+  "position": "Python Backend Developer with Frontend experience",
+  "contact": {
+    "email": "mateusiakdawid@gmail.com",
+    "phone": "+48784709268",
+    "location": "43-600 Jaworzno, Poland"
+  },
+  "summary": "I specialize in building robust, scalable backend systems using Python and Django/DRF. I also bring full-stack capability to the table, developing type-safe frontends with TypeScript and React when the project demands end-to-end ownership."
+}
