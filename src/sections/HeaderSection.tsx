@@ -36,7 +36,10 @@ export function HeaderSection() {
         {data.contact.phone} • {data.contact.location}
       </Typography>
 
-      <Typography variant="body2" sx={{ mt: 2, maxWidth: 600, mx: "auto" }}>
+      <Typography
+        variant="body2"
+        sx={{ mt: 2, maxWidth: 600, mx: "auto", textAlign: "justify" }}
+      >
         {data.summary}
       </Typography>
     </Box>
