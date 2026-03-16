@@ -14,6 +14,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import DownloadIcon from "@mui/icons-material/Download";
+import PhoneIcon from '@mui/icons-material/Phone';
+import { header_section_data as data } from "../data";
 
 export const ProfileCard: React.FC = () => (
   <Card sx={{ height: "100%" }}>
@@ -21,44 +23,50 @@ export const ProfileCard: React.FC = () => (
       <Stack direction="row" spacing={2} alignItems="center">
         <Avatar
           sx={{ width: 112, height: 112 }}
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&fit=crop"
+          src={data.image}
           alt="Profile"
         />
         <Box>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
-            Dawid
+            {data.name}
           </Typography>
-                  <Stack direction="row" spacing={0.5}>
-          <Tooltip title="Download Resume">
-            <IconButton component={Link} href="/resume.pdf">
-              <DownloadIcon />
-            </IconButton>
-          </Tooltip>
+          <Stack direction="row" spacing={0.5}>
+            <Tooltip title="Download Resume">
+              {/* TODO: Generate CV from json data */}
+              <IconButton component={Link} href="/resume.pdf">
+                <DownloadIcon />
+              </IconButton>
+            </Tooltip>
 
-          <Tooltip title="GitHub">
-            <IconButton
-              component={Link}
-              href="https://github.com/your-username"
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
+            <Tooltip title="GitHub">
+              <IconButton
+                component={Link}
+                href={data.contact.github}
+              >
+                <GitHubIcon />
+              </IconButton>
+            </Tooltip>
 
-          <Tooltip title="LinkedIn">
-            <IconButton
-              component={Link}
-              href="https://www.linkedin.cm/in/your-handle"
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Tooltip>
+            <Tooltip title="LinkedIn">
+              <IconButton
+                component={Link}
+                href={data.contact.linkedin}
+              >
+                <LinkedInIcon />
+              </IconButton>
+            </Tooltip>
 
-          <Tooltip title="Gmail">
-            <IconButton component={Link} href="mailto:your.name@gmail.com">
-              <EmailIcon />
-            </IconButton>
-          </Tooltip>
-        </Stack>
+            <Tooltip title={data.contact.email}>
+              <IconButton component={Link} href={`mailto:${data.contact.email}`}>
+                <EmailIcon />
+              </IconButton>
+            </Tooltip>
+            <Tooltip title={data.contact.phone}>
+              <IconButton component={Link} href={`tel:${data.contact.phone}`}>
+                <PhoneIcon />
+              </IconButton>
+            </Tooltip>
+          </Stack>
         </Box>
       </Stack>
     </CardContent>
