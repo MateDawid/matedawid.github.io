@@ -1,7 +1,6 @@
 import * as React from "react";
 import {
   ThemeProvider,
-  createTheme,
   CssBaseline,
   Container,
   Grid,
@@ -12,107 +11,15 @@ import {
   Button,
   Chip,
   Stack,
-  Tooltip,
-  IconButton,
   useTheme,
-  AppBar,
-  Toolbar,
-  Link,
-  Avatar,
 } from "@mui/material";
 import StorageIcon from "@mui/icons-material/Storage";
 import TerminalIcon from "@mui/icons-material/Terminal";
 import PlayArrowIcon from "@mui/icons-material/PlayArrow";
 import BoltIcon from "@mui/icons-material/Bolt";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import EmailIcon from "@mui/icons-material/Email";
-import DownloadIcon from "@mui/icons-material/Download";
-import { ProfileCard } from "./components";
-import { AboutCard } from "./components/AboutCard";
-
-// -------------------- THEME --------------------
-const theme = createTheme({
-  palette: {
-    mode: "dark",
-    background: {
-      default: "#0b0f14",
-      paper: "#0e131a",
-    },
-    primary: { main: "#4dd0e1" },
-    secondary: { main: "#ff4081" },
-    success: { main: "#00E676" },
-    warning: { main: "#FFC107" },
-    info: { main: "#69F0AE" },
-    text: {
-      primary: "#e6f0ff",
-      secondary: "#9fb3c8",
-    },
-  },
-  shape: {
-    borderRadius: 16,
-  },
-  components: {
-    MuiCard: {
-      styleOverrides: {
-        root: {
-          border: "1px solid rgba(255,255,255,0.08)",
-          background:
-            "radial-gradient(1200px circle at 0% 10%, rgba(77,208,225,0.06), transparent 30%), linear-gradient(180deg, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0.00) 100%)",
-          boxShadow:
-            "0 0 0 1px rgba(255,255,255,0.03) inset, 0 12px 30px rgba(0,0,0,0.5), 0 2px 12px rgba(77,208,225,0.12)",
-          backdropFilter: "blur(8px)",
-        },
-      },
-    },
-    MuiButton: {
-      styleOverrides: {
-        root: {
-          textTransform: "none",
-          borderRadius: 12,
-        },
-      },
-    },
-    MuiChip: {
-      styleOverrides: {
-        root: {
-          backgroundColor: "rgba(255,255,255,0.06)",
-          border: "1px solid rgba(255,255,255,0.08)",
-        },
-      },
-    },
-  },
-});
-
-// -------------------- UTIL STYLES --------------------
-const glow = (color = "#4dd0e1", opacity = 0.3) => ({
-  boxShadow: `0 0 0 1px ${color}33 inset, 0 10px 24px ${color}33, 0 0 30px ${color}${Math.round(
-    opacity * 255,
-  ).toString(16)}`,
-});
-const gradientText = (from: string, to: string) => ({
-  background: `linear-gradient(90deg, ${from}, ${to})`,
-  WebkitBackgroundClip: "text",
-  WebkitTextFillColor: "transparent",
-});
-const SectionHeader: React.FC<{ title: string; chip?: string }> = ({
-  title,
-  chip,
-}) => (
-  <Box
-    sx={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "space-between",
-      mb: 2,
-    }}
-  >
-    <Typography variant="h6" sx={{ letterSpacing: 0.5, fontWeight: 700 }}>
-      {title}
-    </Typography>
-    {chip && <Chip size="small" label={chip} />}
-  </Box>
-);
+import { ProfileCard, AboutCard } from "./components";
+import { theme } from "./theme";
+import {glow, gradientText } from "./components/utils";
 
 // -------------------- DATA --------------------
 const skills_mini = [
