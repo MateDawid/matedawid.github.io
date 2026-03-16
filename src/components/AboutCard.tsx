@@ -1,11 +1,6 @@
 import { Card, CardContent, Stack, Typography } from "@mui/material";
 import BoltIcon from "@mui/icons-material/Bolt";
-
-const gradientText = (from: string, to: string) => ({
-    background: `linear-gradient(90deg, ${from}, ${to})`,
-    WebkitBackgroundClip: "text",
-    WebkitTextFillColor: "transparent",
-});
+import { gradientText } from "./utils";
 
 export const AboutCard: React.FC = () => (
     <Card sx={{ height: "100%" }}>
