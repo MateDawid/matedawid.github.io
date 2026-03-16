@@ -2,10 +2,12 @@ export type HeaderSectionData = {
   name: string;
   position: string;
   image?: string;
+  location: string;
   contact: {
-    email: string;
-    phone: string;
-    location: string;
+    phone?: string;
+    email?: string;
+    github?: string;
+    linkedin?: string;
   };
   summary: string;
 };
