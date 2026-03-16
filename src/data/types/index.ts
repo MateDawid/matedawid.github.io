@@ -1,1 +1,2 @@
-export { type HeaderSectionData } from "./HeaderSectionData";
+export { type ProfileCardData } from "./ProfileCardData";
+export { type AboutCardData } from "./AboutCardData";

@@ -1,8 +1,8 @@
-export type HeaderSectionData = {
+export type ProfileCardData = {
   name: string;
-  position: string;
+  position?: string;
   image?: string;
-  location: string;
+  location?: string;
   contact: {
     phone?: string;
     email?: string;
