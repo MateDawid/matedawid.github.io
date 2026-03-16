@@ -139,6 +139,37 @@ const ProfileCard: React.FC = () => (
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             Dawid
           </Typography>
+                  <Stack direction="row" spacing={0.5}>
+          <Tooltip title="Download Resume">
+            <IconButton component={Link} href="/resume.pdf">
+              <DownloadIcon />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="GitHub">
+            <IconButton
+              component={Link}
+              href="https://github.com/your-username"
+            >
+              <GitHubIcon />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="LinkedIn">
+            <IconButton
+              component={Link}
+              href="https://www.linkedin.cm/in/your-handle"
+            >
+              <LinkedInIcon />
+            </IconButton>
+          </Tooltip>
+
+          <Tooltip title="Gmail">
+            <IconButton component={Link} href="mailto:your.name@gmail.com">
+              <EmailIcon />
+            </IconButton>
+          </Tooltip>
+        </Stack>
         </Box>
       </Stack>
     </CardContent>
@@ -656,85 +687,6 @@ const EducationSection: React.FC = () => (
   </Card>
 );
 
-// -------------------- NAVBAR --------------------
-const NavBar: React.FC = () => {
-  const leftItems = [
-    { label: "About", id: "about" },
-    { label: "Skills", id: "skills" },
-    { label: "Experience", id: "experience" },
-    { label: "Projects", id: "projects" },
-    { label: "Education", id: "education" },
-  ];
-
-  return (
-    <AppBar
-      position="sticky"
-      color="transparent"
-      elevation={0}
-      sx={{
-        top: 0,
-        backdropFilter: "blur(10px)",
-        backgroundColor: "rgba(14,19,26,0.6)",
-        borderBottom: "1px solid rgba(255,255,255,0.06)",
-        zIndex: (t) => t.zIndex.drawer + 1,
-      }}
-    >
-      <Toolbar sx={{ minHeight: 64 }}>
-        {/* Left: Section navigation */}
-        <Stack direction="row" spacing={1} sx={{ flex: 1 }}>
-          {leftItems.map((item) => (
-            <Button
-              key={item.id}
-              size="small"
-              color="inherit"
-              onClick={() => scrollToId(item.id)}
-              sx={{
-                color: "text.secondary",
-                "&:hover": { color: "text.primary" },
-              }}
-            >
-              {item.label}
-            </Button>
-          ))}
-        </Stack>
-
-        {/* Right: Actions */}
-        <Stack direction="row" spacing={0.5}>
-          <Tooltip title="Download Resume">
-            <IconButton component={Link} href="/resume.pdf">
-              <DownloadIcon />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="GitHub">
-            <IconButton
-              component={Link}
-              href="https://github.com/your-username"
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="LinkedIn">
-            <IconButton
-              component={Link}
-              href="https://www.linkedin.cm/in/your-handle"
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="Gmail">
-            <IconButton component={Link} href="mailto:your.name@gmail.com">
-              <EmailIcon />
-            </IconButton>
-          </Tooltip>
-        </Stack>
-      </Toolbar>
-    </AppBar>
-  );
-};
-
 // -------------------- PAGE --------------------
 const App: React.FC = () => {
   return (
@@ -749,9 +701,6 @@ const App: React.FC = () => {
             "linear-gradient(180deg, #0b0f14 0%, #0b0f14 100%)",
         }}
       >
-        {/* NEW: Top navigation bar */}
-        <NavBar />
-
         <Container maxWidth="lg" sx={{ py: 2 }}>
           <Grid container spacing={2}>
             {/* Profile + About */}
