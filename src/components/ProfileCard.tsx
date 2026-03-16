@@ -14,8 +14,8 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import DownloadIcon from "@mui/icons-material/Download";
-import PhoneIcon from '@mui/icons-material/Phone';
-import { header_section_data as data } from "../data";
+import PhoneIcon from "@mui/icons-material/Phone";
+import { profile_card_data as data } from "../data";
 
 export const ProfileCard: React.FC = () => (
   <Card sx={{ height: "100%" }}>
@@ -30,6 +30,7 @@ export const ProfileCard: React.FC = () => (
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             {data.name}
           </Typography>
+          <Typography sx={{ fontWeight: 600 }}>{data.location}</Typography>
           <Stack direction="row" spacing={0.5}>
             <Tooltip title="Download Resume">
               {/* TODO: Generate CV from json data */}
@@ -39,25 +40,22 @@ export const ProfileCard: React.FC = () => (
             </Tooltip>
 
             <Tooltip title="GitHub">
-              <IconButton
-                component={Link}
-                href={data.contact.github}
-              >
+              <IconButton component={Link} href={data.contact.github}>
                 <GitHubIcon />
               </IconButton>
             </Tooltip>
 
             <Tooltip title="LinkedIn">
-              <IconButton
-                component={Link}
-                href={data.contact.linkedin}
-              >
+              <IconButton component={Link} href={data.contact.linkedin}>
                 <LinkedInIcon />
               </IconButton>
             </Tooltip>
 
             <Tooltip title={data.contact.email}>
-              <IconButton component={Link} href={`mailto:${data.contact.email}`}>
+              <IconButton
+                component={Link}
+                href={`mailto:${data.contact.email}`}
+              >
                 <EmailIcon />
               </IconButton>
             </Tooltip>
