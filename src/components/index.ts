@@ -1,1 +1,1 @@
-export { SectionTitle } from "./SectionTitle";
+export { ProfileCard } from "./ProfileCard"

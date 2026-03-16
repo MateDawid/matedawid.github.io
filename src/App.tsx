@@ -28,6 +28,7 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import DownloadIcon from "@mui/icons-material/Download";
+import { ProfileCard } from "./components";
 
 // -------------------- THEME --------------------
 const theme = createTheme({
@@ -112,12 +113,6 @@ const SectionHeader: React.FC<{ title: string; chip?: string }> = ({
   </Box>
 );
 
-// Smooth scroll helper
-const scrollToId = (id: string) => {
-  const el = document.getElementById(id);
-  if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-};
-
 // -------------------- DATA --------------------
 const skills_mini = [
   { label: "Python", color: "#ff5ea8" },
@@ -126,55 +121,7 @@ const skills_mini = [
   { label: "TypeScript", color: "#c77dff" },
 ];
 // -------------------- COMPONENTS --------------------
-const ProfileCard: React.FC = () => (
-  <Card sx={{ height: "100%" }}>
-    <CardContent>
-      <Stack direction="row" spacing={2} alignItems="center">
-        <Avatar
-          sx={{ width: 112, height: 112 }}
-          src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&h=200&fit=crop"
-          alt="Profile"
-        />
-        <Box>
-          <Typography variant="h6" sx={{ fontWeight: 800 }}>
-            Dawid
-          </Typography>
-                  <Stack direction="row" spacing={0.5}>
-          <Tooltip title="Download Resume">
-            <IconButton component={Link} href="/resume.pdf">
-              <DownloadIcon />
-            </IconButton>
-          </Tooltip>
 
-          <Tooltip title="GitHub">
-            <IconButton
-              component={Link}
-              href="https://github.com/your-username"
-            >
-              <GitHubIcon />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="LinkedIn">
-            <IconButton
-              component={Link}
-              href="https://www.linkedin.cm/in/your-handle"
-            >
-              <LinkedInIcon />
-            </IconButton>
-          </Tooltip>
-
-          <Tooltip title="Gmail">
-            <IconButton component={Link} href="mailto:your.name@gmail.com">
-              <EmailIcon />
-            </IconButton>
-          </Tooltip>
-        </Stack>
-        </Box>
-      </Stack>
-    </CardContent>
-  </Card>
-);
 
 const AboutCard: React.FC = () => (
   <Card sx={{ height: "100%" }}>
@@ -687,7 +634,6 @@ const EducationSection: React.FC = () => (
   </Card>
 );
 
-// -------------------- PAGE --------------------
 const App: React.FC = () => {
   return (
     <ThemeProvider theme={theme}>
@@ -703,9 +649,7 @@ const App: React.FC = () => {
       >
         <Container maxWidth="lg" sx={{ py: 2 }}>
           <Grid container spacing={2}>
-            {/* Profile + About */}
             <Grid size={{ xs: 12, md: 6, lg: 5 }}>
-              {/* Optional: profile section might not need a nav anchor */}
               <ProfileCard />
             </Grid>
             <Grid size={{ xs: 12, md: 6, lg: 7 }}>
@@ -713,29 +657,21 @@ const App: React.FC = () => {
                 <AboutCard />
               </Box>
             </Grid>
-
-            {/* Skills */}
             <Grid size={{ xs: 12 }}>
               <Box id="skills">
                 <SkillsSection />
               </Box>
             </Grid>
-
-            {/* Experience */}
             <Grid size={12}>
               <Box id="experience">
                 <ExperienceSection />
               </Box>
             </Grid>
-
-            {/* Projects */}
             <Grid size={12}>
               <Box id="projects">
                 <ProjectsSection />
               </Box>
             </Grid>
-
-            {/* Education */}
             <Grid size={{ xs: 12 }}>
               <Box id="education">
                 <EducationSection />
