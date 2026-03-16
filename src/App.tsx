@@ -29,6 +29,7 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import DownloadIcon from "@mui/icons-material/Download";
 import { ProfileCard } from "./components";
+import { AboutCard } from "./components/AboutCard";
 
 // -------------------- THEME --------------------
 const theme = createTheme({
@@ -123,22 +124,7 @@ const skills_mini = [
 // -------------------- COMPONENTS --------------------
 
 
-const AboutCard: React.FC = () => (
-  <Card sx={{ height: "100%" }}>
-    <CardContent>
-      <SectionHeader title="About Me" />
-      <Typography
-        variant="body2"
-        color="text.secondary"
-        sx={{ lineHeight: 1.7 }}
-      >
-        I write about SQL, performance engineering, and developer workflow. I
-        enjoy designing learning tools that feel like games. Below are some
-        projects, utilities, and places to connect.
-      </Typography>
-    </CardContent>
-  </Card>
-);
+
 
 const ExperienceSection: React.FC = () => (
   <Card
