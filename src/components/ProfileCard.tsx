@@ -45,20 +45,6 @@ export const ProfileCard: React.FC = () => (
                 <DownloadIcon />
               </IconButton>
             </Tooltip>
-            {data.contact?.github && (
-              <Tooltip title="GitHub">
-                <IconButton component={Link} href={data.contact.github} target="_blank" rel="noopener noreferrer">
-                  <GitHubIcon />
-                </IconButton>
-              </Tooltip>
-            )}
-            {data.contact?.linkedin && (
-              <Tooltip title="LinkedIn">
-                <IconButton component={Link} href={data.contact.linkedin} target="_blank" rel="noopener noreferrer">
-                  <LinkedInIcon />
-                </IconButton>
-              </Tooltip>
-            )}
             {data.contact?.email && (
               <Tooltip title={data.contact.email}>
                 <IconButton component={Link} href={`mailto:${data.contact.email}`}>
@@ -70,6 +56,20 @@ export const ProfileCard: React.FC = () => (
               <Tooltip title={data.contact.phone}>
                 <IconButton component={Link} href={`tel:${data.contact.phone}`}>
                   <PhoneIcon />
+                </IconButton>
+              </Tooltip>
+            )}
+            {data.contact?.linkedin && (
+              <Tooltip title="LinkedIn">
+                <IconButton component={Link} href={data.contact.linkedin} target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon />
+                </IconButton>
+              </Tooltip>
+            )}
+            {data.contact?.github && (
+              <Tooltip title="GitHub">
+                <IconButton component={Link} href={data.contact.github} target="_blank" rel="noopener noreferrer">
+                  <GitHubIcon />
                 </IconButton>
               </Tooltip>
             )}
