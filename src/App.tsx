@@ -31,10 +31,10 @@ const App: React.FC = () => {
       >
         <Container maxWidth="lg" sx={{ py: 2 }}>
           <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 6, lg: 5 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <ProfileCard />
             </Grid>
-            <Grid size={{ xs: 12, md: 6, lg: 7 }}>
+            <Grid size={{ xs: 12, md: 6 }}>
               <Box>
                 <AboutCard />
               </Box>

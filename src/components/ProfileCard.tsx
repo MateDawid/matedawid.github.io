@@ -16,21 +16,28 @@ import EmailIcon from "@mui/icons-material/Email";
 import DownloadIcon from "@mui/icons-material/Download";
 import PhoneIcon from "@mui/icons-material/Phone";
 import { profile_card_data as data } from "../data";
+import { gradientText } from "./utils";
 
 export const ProfileCard: React.FC = () => (
-  <Card sx={{ height: "100%" }}>
+  <Card
+    sx={{
+      height: "100%",
+      borderColor: "rgba(0,230,118,0.25)",
+      background:
+        "radial-gradient(800px circle at 100% 0%, rgba(0,230,118,0.12), transparent 40%), rgba(255,255,255,0.02)",
+    }}
+  >
     <CardContent>
-      <Stack direction="row" spacing={2} alignItems="center">
+      <Box sx={{ display: "flex", gap: 2, alignItems: "center", justifyContent: "space-around", flexWrap: "wrap" }}>
         {data.image && (
-        <Avatar
-          sx={{ width: 112, height: 112 }}
-          src={data.image}
-          alt="Profile"
-        />)}
-        <Box>
-          <Typography variant="h6" sx={{ fontWeight: 800 }}>
-            {data.name}
-          </Typography>
+          <Avatar
+            sx={{ width: 112, height: 112 }}
+            src={data.image}
+            alt="Profile"
+          />
+        )}
+        <Box sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }} >
+          <Typography variant="h6" sx={gradientText("#00E676", "#4dd0e1")}>{data.name}</Typography>
           {data.position && (
             <Typography variant="subtitle1" color="text.secondary">
               {data.position}
@@ -39,7 +46,7 @@ export const ProfileCard: React.FC = () => (
           {data.location && (
             <Typography sx={{ fontWeight: 600 }}>{data.location}</Typography>
           )}
-          <Stack direction="row" spacing={0.5}>
+          <Box sx={{ display: "flex", alignItems: "center", justifyContent: "space-around", flexWrap: "wrap", gap: 1, mt: 1 }}>
             <Tooltip title="Download Resume">
               <IconButton component={Link} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <DownloadIcon />
@@ -47,14 +54,14 @@ export const ProfileCard: React.FC = () => (
             </Tooltip>
             {data.contact?.email && (
               <Tooltip title={data.contact.email}>
-                <IconButton component={Link} href={`mailto:${data.contact.email}`}>
+                <IconButton component={Link} href={`mailto:${data.contact.email}`} target="_blank" rel="noopener noreferrer">
                   <EmailIcon />
                 </IconButton>
               </Tooltip>
             )}
             {data.contact?.phone && (
               <Tooltip title={data.contact.phone}>
-                <IconButton component={Link} href={`tel:${data.contact.phone}`}>
+                <IconButton component={Link} href={`tel:${data.contact.phone}`} target="_blank" rel="noopener noreferrer">
                   <PhoneIcon />
                 </IconButton>
               </Tooltip>
@@ -73,9 +80,9 @@ export const ProfileCard: React.FC = () => (
                 </IconButton>
               </Tooltip>
             )}
-          </Stack>
+          </Box>
         </Box>
-      </Stack>
+      </Box>
     </CardContent>
   </Card>
 );
