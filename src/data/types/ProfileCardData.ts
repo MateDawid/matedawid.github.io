@@ -3,11 +3,10 @@ export type ProfileCardData = {
   position?: string;
   image?: string;
   location?: string;
-  contact: {
+  contact?: {
     phone?: string;
     email?: string;
     github?: string;
     linkedin?: string;
   };
-  summary: string;
 };

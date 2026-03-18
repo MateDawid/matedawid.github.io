@@ -21,49 +21,58 @@ export const ProfileCard: React.FC = () => (
   <Card sx={{ height: "100%" }}>
     <CardContent>
       <Stack direction="row" spacing={2} alignItems="center">
+        {data.image && (
         <Avatar
           sx={{ width: 112, height: 112 }}
           src={data.image}
           alt="Profile"
-        />
+        />)}
         <Box>
           <Typography variant="h6" sx={{ fontWeight: 800 }}>
             {data.name}
           </Typography>
-          <Typography sx={{ fontWeight: 600 }}>{data.location}</Typography>
+          {data.position && (
+            <Typography variant="subtitle1" color="text.secondary">
+              {data.position}
+            </Typography>
+          )}
+          {data.location && (
+            <Typography sx={{ fontWeight: 600 }}>{data.location}</Typography>
+          )}
           <Stack direction="row" spacing={0.5}>
             <Tooltip title="Download Resume">
-              {/* TODO: Generate CV from json data */}
-              <IconButton component={Link} href="/resume.pdf">
+              <IconButton component={Link} href="/resume.pdf" target="_blank" rel="noopener noreferrer">
                 <DownloadIcon />
               </IconButton>
             </Tooltip>
-
-            <Tooltip title="GitHub">
-              <IconButton component={Link} href={data.contact.github}>
-                <GitHubIcon />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="LinkedIn">
-              <IconButton component={Link} href={data.contact.linkedin}>
-                <LinkedInIcon />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title={data.contact.email}>
-              <IconButton
-                component={Link}
-                href={`mailto:${data.contact.email}`}
-              >
-                <EmailIcon />
-              </IconButton>
-            </Tooltip>
-            <Tooltip title={data.contact.phone}>
-              <IconButton component={Link} href={`tel:${data.contact.phone}`}>
-                <PhoneIcon />
-              </IconButton>
-            </Tooltip>
+            {data.contact?.github && (
+              <Tooltip title="GitHub">
+                <IconButton component={Link} href={data.contact.github} target="_blank" rel="noopener noreferrer">
+                  <GitHubIcon />
+                </IconButton>
+              </Tooltip>
+            )}
+            {data.contact?.linkedin && (
+              <Tooltip title="LinkedIn">
+                <IconButton component={Link} href={data.contact.linkedin} target="_blank" rel="noopener noreferrer">
+                  <LinkedInIcon />
+                </IconButton>
+              </Tooltip>
+            )}
+            {data.contact?.email && (
+              <Tooltip title={data.contact.email}>
+                <IconButton component={Link} href={`mailto:${data.contact.email}`}>
+                  <EmailIcon />
+                </IconButton>
+              </Tooltip>
+            )}
+            {data.contact?.phone && (
+              <Tooltip title={data.contact.phone}>
+                <IconButton component={Link} href={`tel:${data.contact.phone}`}>
+                  <PhoneIcon />
+                </IconButton>
+              </Tooltip>
+            )}
           </Stack>
         </Box>
       </Stack>
