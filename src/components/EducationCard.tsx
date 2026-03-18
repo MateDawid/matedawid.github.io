@@ -24,5 +24,3 @@ export const EducationCard: React.FC = () => (
     </CardContent>
   </Card>
 );
-
-export default EducationCard;
