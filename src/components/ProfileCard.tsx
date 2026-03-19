@@ -33,12 +33,12 @@ export const ProfileCard: React.FC = () => {
               {data.name}
             </Typography>
             {data.position && (
-              <Typography variant="subtitle1" color="text.secondary">
+              <Typography sx={{ fontWeight: 600 }}>
                 {data.position}
               </Typography>
             )}
             {data.location && (
-              <Typography sx={{ fontWeight: 600 }}>{data.location}</Typography>
+              <Typography color="text.secondary">{data.location}</Typography>
             )}
             <IconsBox>
               <Tooltip title="Download Resume">
