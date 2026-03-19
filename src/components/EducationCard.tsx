@@ -14,7 +14,7 @@ export const EducationCard: React.FC = () => (
     <CardContent>
       <Stack direction="row" alignItems="center" spacing={1}>
         <TerminalIcon sx={{ color: "#00E676" }} />
-        <Typography variant="h6" sx={gradientText("#00E676", "#4dd0e1")}> 
+        <Typography variant="h6" sx={gradientText("#00E676", "#4dd0e1")}>
           Education
         </Typography>
       </Stack>
