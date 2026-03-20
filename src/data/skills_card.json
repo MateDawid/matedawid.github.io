@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "name": "Python",
+      "description": "Experienced in Python programming, with a strong focus on backend development. Proficient in writing clean, efficient, and maintainable code.",
+      "image": "/media/python.png"
+    },
+    {
+      "name": "Django",
+      "description": "Proficient in Django, a high-level Python web framework. Experienced in developing scalable and secure web applications using Django's built-in features such as ORM, authentication, and admin interface.",
+      "image": "/media/django.png"
+    },
+    {
+      "name": "Django REST Framework",
+      "description": "Skilled in using Django REST Framework to build RESTful APIs. Experienced in designing and implementing API endpoints, handling authentication and permissions.",
+      "image": "/media/drf.png"
+    },
+    {
+      "name": "JavaScript",
+      "description": "Solid understanding of JavaScript for building interactive web applications, including ES6+ features, async programming, and DOM manipulation.",
+      "image": "/media/javascript.png"
+    },
+    {
+      "name": "TypeScript",
+      "description": "Experienced in TypeScript for building type-safe applications, improving code quality and developer experience.",
+      "image": "/media/typescript.png"
+    },
+    {
+      "name": "React",
+      "description": "Experienced in building dynamic user interfaces with React, including hooks, context, and component composition.",
+      "image": "/media/react.png"
+    }
+  ]
+}
