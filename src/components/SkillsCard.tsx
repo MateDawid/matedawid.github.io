@@ -2,7 +2,11 @@ import { Typography, CardContent, Stack } from "@mui/material";
 import { gradientText } from "./utils";
 import BuildIcon from "@mui/icons-material/Build";
 import { skills_card_data as data } from "../data";
-import { StyledSkillsCard, SkillIconCircle, SkillIcon } from "./SkillsCard.style";
+import {
+  StyledSkillsCard,
+  SkillIconCircle,
+  SkillIcon,
+} from "./SkillsCard.style";
 
 type SkillItem = {
   name: string;
@@ -13,15 +17,17 @@ type SkillItem = {
 const SkillRow: React.FC<{ skill: SkillItem }> = ({ skill }) => (
   <Stack direction="row" spacing={2} alignItems="center">
     <SkillIconCircle>
-      <SkillIcon
-        component="img"
-        src={skill.image}
-        alt={skill.name}
-      />
+      <SkillIcon component="img" src={skill.image} alt={skill.name} />
     </SkillIconCircle>
     <div>
-      <Typography sx={{ fontWeight: 700, fontSize: 16 }}>{skill.name}</Typography>
-      <Typography variant="body2" color="text.secondary" sx={{ mt: 0.5, textAlign: "justify" }}>
+      <Typography sx={{ fontWeight: 700, fontSize: 16 }}>
+        {skill.name}
+      </Typography>
+      <Typography
+        variant="body2"
+        color="text.secondary"
+        sx={{ mt: 0.5, textAlign: "justify" }}
+      >
         {skill.description}
       </Typography>
     </div>
