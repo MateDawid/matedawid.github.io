@@ -30,14 +30,12 @@ const App: React.FC = () => {
         }}
       >
         <Container maxWidth="lg" sx={{ py: 2 }}>
-          <Grid container spacing={2}>
-            <Grid size={{ xs: 12, md: 6 }}>
+          <Grid container spacing={2} alignItems="stretch">
+            <Grid size={{ xs: 12, md: 5 }} sx={{ display: "flex" }}>
               <ProfileCard />
             </Grid>
-            <Grid size={{ xs: 12, md: 6 }}>
-              <Box>
-                <AboutCard />
-              </Box>
+            <Grid size={{ xs: 12, md: 7 }} sx={{ display: "flex" }}>
+              <AboutCard />
             </Grid>
             <Grid size={{ xs: 12 }}>
               <Box>

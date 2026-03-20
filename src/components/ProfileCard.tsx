@@ -33,9 +33,7 @@ export const ProfileCard: React.FC = () => {
               {data.name}
             </Typography>
             {data.position && (
-              <Typography sx={{ fontWeight: 600 }}>
-                {data.position}
-              </Typography>
+              <Typography sx={{ fontWeight: 600 }}>{data.position}</Typography>
             )}
             {data.location && (
               <Typography color="text.secondary">{data.location}</Typography>

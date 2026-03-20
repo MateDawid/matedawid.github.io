@@ -2,6 +2,8 @@ import { styled } from "@mui/material/styles";
 import { Card, Box, Avatar } from "@mui/material";
 
 export const StyledProfileCard = styled(Card)(({ theme }) => ({
+  height: "100%",
+  width: "100%",
   borderColor: "rgba(0,230,118,0.25)",
   background:
     "radial-gradient(800px circle at 100% 0%, rgba(0,230,118,0.12), transparent 40%), rgba(255,255,255,0.02)",
