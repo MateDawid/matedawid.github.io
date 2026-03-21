@@ -1,0 +1,65 @@
+{
+  "skill_chip_colors": {
+    "Python": "#306998",
+    "Django": "#44B78B",
+    "Django REST Framework": "#E53935",
+    "TypeScript": "#3178C6",
+    "React": "#61DAFB",
+    "Celery": "#4CAF50",
+    "Elasticsearch": "#00BCD4",
+    "Kafka": "#B0BEC5",
+    "Docker": "#2496ED",
+    "OpenShift": "#EE0000",
+    "Azure DevOps": "#0078D7",
+    "JavaScript": "#F7DF1E"
+  },
+  "experienceItems": [
+    {
+      "position": "Enginner II",
+      "company_name": "ING Hubs Poland",
+      "company_image": "/media/ing.png",
+      "description": "Worked on various projects involving web development and data analysis.",
+      "skills": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "TypeScript",
+        "React",
+        "Celery",
+        "Elasticsearch",
+        "Kafka",
+        "Docker",
+        "OpenShift",
+        "Azure DevOps"
+      ],
+      "start_date": "January 2020",
+      "end_date": "Present"
+    },
+    {
+      "position": "Enginner I",
+      "company_name": "ING Hubs Poland",
+      "company_image": "/media/ing.png",
+      "description": "Contributed to the development of mobile applications and backend services.",
+      "skills": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "Celery",
+        "Docker",
+        "OpenShift",
+        "Azure DevOps"
+      ],
+      "start_date": "June 2018",
+      "end_date": "December 2019"
+    },
+    {
+      "position": "Junior Backend Developer",
+      "company_name": "media-press.tv",
+      "company_image": "/media/media_presstv.jpg",
+      "description": "Contributed to the development of mobile applications and backend services.",
+      "skills": ["Python", "Django", "Celery", "JavaScript", "Azure DevOps"],
+      "start_date": "June 2018",
+      "end_date": "December 2019"
+    }
+  ]
+}
