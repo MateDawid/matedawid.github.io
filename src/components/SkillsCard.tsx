@@ -15,7 +15,7 @@ type SkillItem = {
 };
 
 const SkillRow: React.FC<{ skill: SkillItem }> = ({ skill }) => (
-  <Stack direction="row" spacing={2} alignItems="center">
+  <Stack direction="row" spacing={2}>
     <SkillIconCircle>
       <SkillIcon component="img" src={skill.image} alt={skill.name} />
     </SkillIconCircle>

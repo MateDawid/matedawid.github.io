@@ -37,25 +37,21 @@ const App: React.FC = () => {
             <Grid size={{ xs: 12, md: 7 }} sx={{ display: "flex" }}>
               <AboutCard />
             </Grid>
-            <Grid size={{ xs: 12 }}>
-              <Box>
-                <SkillsCard />
-              </Box>
+            <Grid size={{ xs: 12, md: 8 }}>
+              <Grid container spacing={2}>
+                <Grid size={12}>
+                  <ExperienceCard />
+                </Grid>
+                <Grid size={12}>
+                  <ProjectsCard />
+                </Grid>
+                <Grid size={12}>
+                  <EducationCard />
+                </Grid>
+              </Grid>
             </Grid>
-            <Grid size={12}>
-              <Box>
-                <ExperienceCard />
-              </Box>
-            </Grid>
-            <Grid size={12}>
-              <Box>
-                <ProjectsCard />
-              </Box>
-            </Grid>
-            <Grid size={{ xs: 12 }}>
-              <Box>
-                <EducationCard />
-              </Box>
+            <Grid size={{ xs: 12, md: 4 }}>
+              <SkillsCard />
             </Grid>
           </Grid>
         </Container>

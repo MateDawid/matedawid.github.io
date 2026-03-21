@@ -11,7 +11,11 @@
     "Docker": "#2496ED",
     "OpenShift": "#EE0000",
     "Azure DevOps": "#0078D7",
-    "JavaScript": "#F7DF1E"
+    "JavaScript": "#F7DF1E",
+    "Redis": "#D82C20",
+    "Oracle Database": "#F80000",
+    "PostgreSQL": "#336791",
+    "GitHub Copilot": "#7B61FF"
   },
   "experienceItems": [
     {
@@ -25,9 +29,12 @@
         "Django REST Framework",
         "TypeScript",
         "React",
+        "GitHub Copilot",
         "Celery",
+        "Redis",
         "Elasticsearch",
         "Kafka",
+        "Oracle Database",
         "Docker",
         "OpenShift",
         "Azure DevOps"
@@ -45,6 +52,8 @@
         "Django",
         "Django REST Framework",
         "Celery",
+        "Redis",
+        "Oracle Database",
         "Docker",
         "OpenShift",
         "Azure DevOps"
@@ -57,7 +66,7 @@
       "company_name": "media-press.tv",
       "company_image": "/media/media_presstv.jpg",
       "description": "Contributed to the development of mobile applications and backend services.",
-      "skills": ["Python", "Django", "Celery", "JavaScript", "Azure DevOps"],
+      "skills": ["Python", "Django", "PostgreSQL", "Celery", "Redis", "JavaScript", "Azure DevOps"],
       "start_date": "June 2018",
       "end_date": "December 2019"
     }
