@@ -8,6 +8,7 @@ import {
   CompanyImageBox,
   CompanyImage,
 } from "./ExperienceCard.style";
+import { ProjectDescription } from "./ProjectsCard.style";
 
 export const ExperienceCard: React.FC = () => (
   <StyledExperienceCard>
@@ -20,41 +21,40 @@ export const ExperienceCard: React.FC = () => (
       </Stack>
       <Stack spacing={3}>
         {data.experienceItems.map((item, idx) => (
-          <Stack key={idx} direction="row" spacing={2}>
-            <CompanyImageBox>
-              <CompanyImage
-                component="img"
-                src={item.company_image}
-                alt={item.company_name}
-              />
-            </CompanyImageBox>
-            <Box flex={1}>
-              <Typography sx={{ fontWeight: 800, fontSize: 18 }}>
-                {item.position}
-              </Typography>
-              <Typography
-                variant="subtitle2"
-                color="text.secondary"
-                sx={{ mb: 1 }}
-              >
-                {item.company_name} &nbsp;·&nbsp; {item.start_date} –{" "}
-                {item.end_date ?? "Present"}
-              </Typography>
-              {item.skills && (
-                <Stack direction="row" flexWrap="wrap" sx={{ mb: 1 }}>
-                  {item.skills.map((skill) => (
-                    <SkillChip key={skill} skill={skill} />
-                  ))}
-                </Stack>
-              )}
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ textAlign: "justify" }}
-              >
-                {item.description}
-              </Typography>
-            </Box>
+          <Stack key={idx} spacing={1}>
+            <Stack direction="row" spacing={2} alignItems="center">
+              <CompanyImageBox>
+                <CompanyImage
+                  component="img"
+                  src={item.company_image}
+                  alt={item.company_name}
+                />
+              </CompanyImageBox>
+              <Box flex={1}>
+                <Typography sx={{ fontWeight: 800, fontSize: 18 }}>
+                  {item.position}
+                </Typography>
+                <Typography
+                  variant="subtitle2"
+                  color="text.secondary"
+                  sx={{ mb: 1 }}
+                >
+                  {item.company_name} &nbsp;·&nbsp; {item.start_date} –{" "}
+                  {item.end_date ?? "Present"}
+                </Typography>
+
+              </Box>
+            </Stack>
+                            {item.skills && (
+                  <Stack direction="row" flexWrap="wrap">
+                    {item.skills.map((skill) => (
+                      <SkillChip key={skill} skill={skill} />
+                    ))}
+                  </Stack>
+                )}
+            <ProjectDescription variant="body2" color="text.secondary">
+              {item.description}
+            </ProjectDescription>
           </Stack>
         ))}
       </Stack>

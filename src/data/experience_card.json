@@ -1,44 +1,29 @@
 {
   "experienceItems": [
     {
-      "position": "Enginner II",
+      "position": "Backend Developer",
       "company_name": "ING Hubs Poland",
       "company_image": "/media/ing.png",
-      "description": "Worked on various projects involving web development and data analysis.",
+      "description": "• Collaborated on the architectural design and implementation of a dedicated authentication microservice using Python, Django, and Django REST Framework.\n• Developed and optimized main application microservice functionalities, focusing on automation and performance enhancements to streamline backend processes.\n• Engineered full-stack Backstage plugins (Backend & Frontend) using TypeScript and React to enable entity review capabilities within the developer portal.\n• Create Backstage frontend plugin using TypeScript and React to display products data and documentation utilizing main application microservice.\n• Writing unit tests in pytest and Jest.\n• Utilizing AI tools like Github Copilot in daily work.",
       "skills": [
         "Python",
         "Django",
         "Django REST Framework",
         "TypeScript",
-        "React",
-        "GitHub Copilot",
-        "Celery",
-        "Redis",
-        "Elasticsearch",
-        "Kafka",
-        "Oracle Database",
-        "Docker",
-        "OpenShift",
-        "Azure DevOps"
+        "React"
       ],
       "start_date": "January 2020",
       "end_date": "Present"
     },
     {
-      "position": "Enginner I",
+      "position": "Junior Backend Developer",
       "company_name": "ING Hubs Poland",
       "company_image": "/media/ing.png",
-      "description": "Contributed to the development of mobile applications and backend services.",
+      "description": "• Designed and implemented a dedicated microservice for tutorial creation, leveraging Python, Django, Django REST Framework, Celery, Redis and Amazon S3.\n• Improved performance of main application microservice by reducing database queries and code optimizations.\n• Writing unit tests in pytest.",
       "skills": [
         "Python",
         "Django",
-        "Django REST Framework",
-        "Celery",
-        "Redis",
-        "Oracle Database",
-        "Docker",
-        "OpenShift",
-        "Azure DevOps"
+        "Django REST Framework"
       ],
       "start_date": "June 2018",
       "end_date": "December 2019"
@@ -47,16 +32,8 @@
       "position": "Junior Backend Developer",
       "company_name": "media-press.tv",
       "company_image": "/media/media_presstv.jpg",
-      "description": "Contributed to the development of mobile applications and backend services.",
-      "skills": [
-        "Python",
-        "Django",
-        "PostgreSQL",
-        "Celery",
-        "Redis",
-        "JavaScript",
-        "Azure DevOps"
-      ],
+      "description": "• Implement data import from Comarch ERP Optima database to Python backend developed with Django.\n• Adjust Django Admin panel to work as financial system for handling company invoices, data exports, reports generations, etc.\n• Cooperation with financial departments and management in determining the required functionalities in the system,\n• Application maintenance and technical support.",
+      "skills": ["Python", "Django", "JavaScript"],
       "start_date": "June 2018",
       "end_date": "December 2019"
     }
