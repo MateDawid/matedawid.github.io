@@ -20,11 +20,7 @@
       "company_name": "ING Hubs Poland",
       "company_image": "/media/ing.png",
       "description": "• Designed and implemented a dedicated microservice for tutorial creation, leveraging Python, Django, Django REST Framework, Celery, Redis and Amazon S3.\n• Improved performance of main application microservice by reducing database queries and code optimizations.\n• Writing unit tests in pytest.",
-      "skills": [
-        "Python",
-        "Django",
-        "Django REST Framework"
-      ],
+      "skills": ["Python", "Django", "Django REST Framework"],
       "start_date": "June 2018",
       "end_date": "December 2019"
     },

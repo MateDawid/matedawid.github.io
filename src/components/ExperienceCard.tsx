@@ -42,16 +42,15 @@ export const ExperienceCard: React.FC = () => (
                   {item.company_name} &nbsp;·&nbsp; {item.start_date} –{" "}
                   {item.end_date ?? "Present"}
                 </Typography>
-
               </Box>
             </Stack>
-                            {item.skills && (
-                  <Stack direction="row" flexWrap="wrap">
-                    {item.skills.map((skill) => (
-                      <SkillChip key={skill} skill={skill} />
-                    ))}
-                  </Stack>
-                )}
+            {item.skills && (
+              <Stack direction="row" flexWrap="wrap">
+                {item.skills.map((skill) => (
+                  <SkillChip key={skill} skill={skill} />
+                ))}
+              </Stack>
+            )}
             <ProjectDescription variant="body2" color="text.secondary">
               {item.description}
             </ProjectDescription>
