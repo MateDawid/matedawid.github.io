@@ -1,6 +1,5 @@
 import { styled } from "@mui/material/styles";
 import { Card, Box } from "@mui/material";
-import { glow } from "./utils";
 
 export const StyledExperienceCard = styled(Card)({
   borderColor: "rgba(255,64,129,0.25)",
