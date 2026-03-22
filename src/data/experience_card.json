@@ -12,7 +12,7 @@
         "TypeScript",
         "React"
       ],
-      "start_date": "January 2020",
+      "start_date": "Jan 2024",
       "end_date": "Present"
     },
     {
@@ -21,8 +21,8 @@
       "company_image": "/media/ing.png",
       "description": "• Designed and implemented a dedicated microservice for tutorial creation, leveraging Python, Django, Django REST Framework, Celery, Redis and Amazon S3.\n• Improved performance of main application microservice by reducing database queries and code optimizations.\n• Writing unit tests in pytest.",
       "skills": ["Python", "Django", "Django REST Framework"],
-      "start_date": "June 2018",
-      "end_date": "December 2019"
+      "start_date": "Jun 2023",
+      "end_date": "Dec 2023"
     },
     {
       "position": "Junior Backend Developer",
@@ -30,8 +30,8 @@
       "company_image": "/media/media_presstv.jpg",
       "description": "• Implement data import from Comarch ERP Optima database to Python backend developed with Django.\n• Adjust Django Admin panel to work as financial system for handling company invoices, data exports, reports generations, etc.\n• Cooperation with financial departments and management in determining the required functionalities in the system,\n• Application maintenance and technical support.",
       "skills": ["Python", "Django", "JavaScript"],
-      "start_date": "June 2018",
-      "end_date": "December 2019"
+      "start_date": "Aug 2021",
+      "end_date": "May 2023"
     }
   ]
 }
