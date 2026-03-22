@@ -1,0 +1,47 @@
+{
+  "projectsItems": [
+    {
+      "name": "Budgetory - Full stack web application for managing personal budget",
+      "description": "Budgetory is a full stack personal finance management application consisting of a Django REST Framework API, PostgreSQL database, and React frontend client. Application enables to:\n• Create separate Wallets for mental grouping of financial instruments,\n• Create Deposits inside of Wallets to represent particular financial instruments,\n• Create Categories for Incomes and Expenses\n• Create Periods and Expense Predictions\n• Create Incomes and Expenses\n• Track Budget with charts and tables.",
+      "skills": [
+        "Python",
+        "Django",
+        "Django REST Framework",
+        "JavaScript",
+        "React",
+        "PostgresSQL",
+        "Docker"
+      ],
+      "image": "/media/budgetory.gif",
+      "urls": [
+        {
+          "type": "Demo",
+          "url": "https://budgetory.onrender.com/"
+        },
+        {
+          "type": "GitHub",
+          "url": "https://github.com/MateDawid/BudgetoryApp"
+        },
+        {
+          "type": "Documentation",
+          "url": "https://budgetory-api.onrender.com/api/swagger/"
+        }
+      ]
+    },
+    {
+      "name": "Kindle-Clippings-CLI - CLI for managing Kindle clippings",
+      "description": "Kindle Clippings CLI is a simple, command-line interface tool for converting clippings from your Kindle device. It extracts your clippings from the My Clippings.txt file and provides an easy way to export the clippings into different formats.\n• Extracts and parses highlights and notes from the Kindle My Clippings.txt file.\n• Converts clippings into different formats (JSON and Excel at the moment).\n• Lightweight and fast, designed for users comfortable with the command line.\n\nCLI can be run with provided binary file or as a Python package. Setup process was described on GitHub and PyPi.",
+      "skills": ["Python", "click"],
+      "urls": [
+        {
+          "type": "GitHub",
+          "url": "https://github.com/MateDawid/Kindle-Clippings-CLI"
+        },
+        {
+          "type": "Documentation",
+          "url": "https://pypi.org/project/clippings-cli/"
+        }
+      ]
+    }
+  ]
+}

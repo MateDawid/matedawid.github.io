@@ -1,22 +1,4 @@
 {
-  "skill_chip_colors": {
-    "Python": "#306998",
-    "Django": "#44B78B",
-    "Django REST Framework": "#E53935",
-    "TypeScript": "#3178C6",
-    "React": "#61DAFB",
-    "Celery": "#4CAF50",
-    "Elasticsearch": "#00BCD4",
-    "Kafka": "#B0BEC5",
-    "Docker": "#2496ED",
-    "OpenShift": "#EE0000",
-    "Azure DevOps": "#0078D7",
-    "JavaScript": "#F7DF1E",
-    "Redis": "#D82C20",
-    "Oracle Database": "#F80000",
-    "PostgreSQL": "#336791",
-    "GitHub Copilot": "#7B61FF"
-  },
   "experienceItems": [
     {
       "position": "Enginner II",

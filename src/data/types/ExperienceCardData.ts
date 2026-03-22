@@ -9,6 +9,5 @@ type ExperienceItem = {
 };
 
 export type ExperienceCardData = {
-  skill_chip_colors: Record<string, string>;
   experienceItems: ExperienceItem[];
 };

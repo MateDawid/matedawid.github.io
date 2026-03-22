@@ -1,7 +1,8 @@
-import { Box, CardContent, Chip, Stack, Typography } from "@mui/material";
+import { Box, CardContent, Stack, Typography } from "@mui/material";
 import { gradientText } from "./utils";
 import BoltIcon from "@mui/icons-material/Bolt";
 import { experience_card_data as data } from "../data";
+import { SkillChip } from "./SkillChip";
 import {
   StyledExperienceCard,
   CompanyImageBox,
@@ -41,24 +42,9 @@ export const ExperienceCard: React.FC = () => (
               </Typography>
               {item.skills && (
                 <Stack direction="row" flexWrap="wrap" sx={{ mb: 1 }}>
-                  {item.skills.map((skill, i) => {
-                    const color = data.skill_chip_colors[skill] ?? "#aaaaaa";
-                    return (
-                      <Chip
-                        key={skill}
-                        label={skill}
-                        sx={{
-                          borderColor: `${color}55`,
-                          backgroundColor: `${color}1a`,
-                          color,
-                          mr: 0.5,
-                          mb: 0.5,
-                        }}
-                        variant="outlined"
-                        size="small"
-                      />
-                    );
-                  })}
+                  {item.skills.map((skill) => (
+                    <SkillChip key={skill} skill={skill} />
+                  ))}
                 </Stack>
               )}
               <Typography
