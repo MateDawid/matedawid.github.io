@@ -4,3 +4,4 @@ export { type SkillsCardData } from "./SkillsCardData";
 export { type ExperienceCardData } from "./ExperienceCardData";
 export { type ProjectsCardData } from "./ProjectsCardData";
 export { type EducationCardData } from "./EducationCardData";
+export { type InterestsCardData } from "./InterestsCardData";

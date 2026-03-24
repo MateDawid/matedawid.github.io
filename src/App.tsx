@@ -1,9 +1,10 @@
 import * as React from "react";
-import { ThemeProvider, CssBaseline, Grid } from "@mui/material";
+import { ThemeProvider, CssBaseline, Grid, Stack } from "@mui/material";
 import {
   ProfileCard,
   AboutCard,
   SkillsCard,
+  InterestsCard,
   ExperienceCard,
   ProjectsCard,
   EducationCard,
@@ -38,7 +39,10 @@ const App: React.FC = () => {
               </Grid>
             </Grid>
             <Grid size={{ xs: 12, md: 4 }}>
-              <SkillsCard />
+              <Stack spacing={2}>
+                <SkillsCard />
+                <InterestsCard />
+              </Stack>
             </Grid>
           </Grid>
         </AppContainer>
