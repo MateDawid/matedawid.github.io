@@ -2,32 +2,32 @@
   "skills": [
     {
       "name": "Python",
-      "description": "I have the most experience in this language, I am using it every day at work and in my projects. I am proficient in writing clean, efficient, and maintainable code in Python, with a strong focus on backend development.",
+      "description": "I have the most experience with this language, using it every day at work and in personal projects. Proficient in writing clean, efficient, and maintainable Python code with a strong focus on backend development.",
       "image": "/media/python.png"
     },
     {
       "name": "Django",
-      "description": "Similarly as Python, I have extensive experience with Django, using it in all my workplaces and in Budgetory project. I am proficient in leveraging Django's features to build scalable and secure web applications, including ORM, authentication, and admin interface.",
+      "description": "Similarly to Python, I have extensive experience with Django, using it across all my workplaces and in the Budgetory project. Proficient in leveraging Django's features to build scalable and secure web applications, including its ORM, authentication, and admin interface.",
       "image": "/media/django.png"
     },
     {
       "name": "Django REST Framework",
-      "description": "I am using Django REST Framework at my current work and in Budgetory project. I have strong experience in building robust and scalable APIs, including serialization, viewsets, and authentication mechanisms.",
+      "description": "I use Django REST Framework in my current role and in the Budgetory project. I have strong experience building robust and scalable APIs, including serialization, viewsets, and authentication mechanisms.",
       "image": "/media/drf.png"
     },
     {
       "name": "TypeScript",
-      "description": "Developed Backstage plugins using TypeScript, having understanding of its features and still improving.",
+      "description": "Used TypeScript to develop Backstage plugins, with a solid understanding of its features and a continuous drive to improve.",
       "image": "/media/typescript.png"
     },
     {
       "name": "React",
-      "description": "Experienced thanks to Budgetory project and developing Backstage plugins. I have experience in building dynamic user interfaces with React, including hooks, context, and component composition.",
+      "description": "Gained experience through the Budgetory project and developing Backstage plugins. Proficient in building dynamic user interfaces with React, including hooks, context, and component composition.",
       "image": "/media/react.png"
     },
     {
       "name": "JavaScript",
-      "description": "Used JavaScript in media-press.tv for frontend adjustments in Django Admin and in Budgetory project. I have a solid understanding of JavaScript for building interactive web applications.",
+      "description": "Used JavaScript at media-press.tv for frontend adjustments in Django Admin and in the Budgetory project. Solid understanding of JavaScript for building interactive web applications.",
       "image": "/media/javascript.png"
     }
   ]
