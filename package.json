@@ -25,7 +25,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettier:check": "npx prettier . --check",
-    "prettier:fix": "npx prettier . --write"
+    "prettier:fix": "npx prettier . --write",
+    "generate-pdf": "ts-node --project tsconfig.cv-generator.json cv-generator/generate-pdf.ts"
   },
   "eslintConfig": {
     "extends": [
@@ -49,6 +50,8 @@
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "prettier": "^3.8.1",
+    "puppeteer": "^24.0.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.9.3"
   }
 }

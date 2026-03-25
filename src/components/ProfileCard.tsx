@@ -42,7 +42,7 @@ export const ProfileCard: React.FC = () => {
               <Tooltip title="Download Resume">
                 <IconButton
                   component={Link}
-                  href="/resume.pdf"
+                  href="/media/resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

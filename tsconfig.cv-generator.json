@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "outDir": "./cv-generator/dist",
+    "noEmit": false,
+    "jsx": "react",
+    "esModuleInterop": true
+  },
+  "include": ["cv-generator"]
+}
