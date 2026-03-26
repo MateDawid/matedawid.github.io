@@ -9,8 +9,7 @@
         "Django REST Framework",
         "JavaScript",
         "React",
-        "PostgreSQL",
-        "Docker"
+        "PostgreSQL"
       ],
       "image": "/media/budgetory.gif",
       "urls": [

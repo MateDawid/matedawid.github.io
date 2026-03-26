@@ -80,6 +80,8 @@ const CSS = `
 
   /* Cards */
   .card { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 12px; page-break-inside: avoid; break-inside: avoid; }
+  .card-experience { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 4px; page-break-inside: avoid; break-inside: avoid; }
+  .card-project { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 4px; page-break-inside: avoid; break-inside: avoid; }
   .card-breakable { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 12px; page-break-inside: auto; break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
   .card-breakable .item:not(:last-child) { border-bottom: 1px solid #eee; padding-bottom: 10px; }
   .card-next-page { page-break-before: always; break-before: always; }
@@ -96,7 +98,7 @@ const CSS = `
   .item-sub   { font-size: 10px; color: #444; margin: 1px 0 4px; }
   .chips { display: flex; flex-wrap: wrap; gap: 3px; margin: 5px 0; }
   .chip { font-size: 9px; border: 1px solid; border-radius: 10px; padding: 1px 6px; background: #fff; }
-  .bullet-line { color: #333; font-size: 10px; line-height: 1.6; }
+  .bullet-line { color: #333; font-size: 10px; line-height: 1.6; text-align: justify; }
 
   /* Item with image */
   .item-row { display: flex; gap: 10px; align-items: flex-start; }
@@ -110,7 +112,7 @@ const CSS = `
   .skill-row { display: flex; gap: 8px; align-items: flex-start; }
   .skill-img { width: 32px; height: 32px; object-fit: contain; flex-shrink: 0; }
   .skill-name { font-size: 11px; font-weight: 700; color: #111; }
-  .skill-desc { font-size: 10px; color: #444; margin-top: 1px; }
+  .skill-desc { font-size: 10px; color: #444; margin-top: 1px; text-align: justify; }
 
   /* Projects */
   .project-name { font-size: 12px; font-weight: 700; color: #111; }
@@ -127,7 +129,10 @@ const CSS = `
   .interest-row { display: flex; gap: 8px; align-items: flex-start; }
   .interest-icon { font-size: 20px; flex-shrink: 0; width: 28px; text-align: center; }
   .interest-name { font-size: 11px; font-weight: 700; color: #111; }
-  .interest-desc { font-size: 10px; color: #444; margin-top: 1px; }
+  .interest-desc { font-size: 10px; color: #444; margin-top: 1px; text-align: justify; }
+
+  /* GDPR */
+  .gdpr { margin-top: 16px; font-size: 8px; color: #888; text-align: justify; border-top: 1px solid #ddd; padding-top: 8px; }
 `;
 
 export function buildHtml(data: TemplateData): string {
@@ -178,7 +183,7 @@ export function buildHtml(data: TemplateData): string {
   <div class="col-left">
 
     <!-- EXPERIENCE -->
-    <div class="card">
+    <div class="card card-breakable">
       ${sectionTitle("⚡", "Experience")}
       ${experience.experienceItems
         .map(
@@ -308,6 +313,7 @@ export function buildHtml(data: TemplateData): string {
 
   </div>
 </div>
+<div class="gdpr">I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</div>
 </body>
 </html>`;
 }
