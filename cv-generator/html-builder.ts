@@ -97,7 +97,6 @@ const CSS = `
   /* Item with image */
   .item-row { display: flex; gap: 10px; align-items: flex-start; }
   .item-img-col { display: flex; flex-direction: column; align-items: center; gap: 4px; flex-shrink: 0; }
-  .item-img-col .chips { flex-direction: column; align-items: center; margin: 0; }
   .item-img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 1px solid #ccc; flex-shrink: 0; background: #f5f5f5; }
   .item-body { flex: 1; }
 
@@ -190,16 +189,17 @@ export function buildHtml(data: TemplateData): string {
           }) => `
         <div class="item">
           <div class="item-row">
-            ${item.company_image && imgSrc(item.company_image) ? `<div class="item-img-col"><img class="item-img" src="${imgSrc(item.company_image)}" alt="${escHtml(item.company_name)}"/>${item.skills?.length ? `<div class="chips">${skillChips(item.skills, skillChipColors)}</div>` : ""}</div>` : ""}
+            ${item.company_image && imgSrc(item.company_image) ? `<img class="item-img" src="${imgSrc(item.company_image)}" alt="${escHtml(item.company_name)}"/>` : ""}
             <div class="item-body">
               <div class="item-header">
                 <span class="item-title">${escHtml(item.position)}</span>
                 <span class="item-date">${escHtml(item.start_date)} – ${escHtml(item.end_date ?? "Present")}</span>
               </div>
               <div class="item-sub">${escHtml(item.company_name)}</div>
-              <div style="margin-top:5px">${bulletLines(item.description)}</div>
             </div>
           </div>
+          ${item.skills?.length ? `<div class="chips">${skillChips(item.skills, skillChipColors)}</div>` : ""}
+          <div style="margin-top:5px">${bulletLines(item.description)}</div>
         </div>`,
         )
         .join("")}
