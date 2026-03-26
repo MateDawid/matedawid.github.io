@@ -80,8 +80,12 @@ const CSS = `
 
   /* Cards */
   .card { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 12px; page-break-inside: avoid; break-inside: avoid; }
+  .card-breakable { border-radius: 6px; border: 1px solid #111; background: #fff; padding: 10px 12px; margin-bottom: 12px; page-break-inside: auto; break-inside: auto; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+  .card-breakable .item:not(:last-child) { border-bottom: 1px solid #eee; padding-bottom: 10px; }
+  .card-next-page { page-break-before: always; break-before: always; }
+  @page { margin: 28px 32px; }
 
-  .section-title { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 800; color: #111; margin-bottom: 8px; border-bottom: 1px solid #ddd; padding-bottom: 4px; }
+  .section-title { display: flex; align-items: center; gap: 5px; font-size: 13px; font-weight: 800; color: #111; margin-bottom: 8px; border-bottom: 1px solid #ddd; padding-bottom: 4px; page-break-after: avoid; break-after: avoid; }
 
   /* Items */
   .item { margin-bottom: 10px; page-break-inside: avoid; break-inside: avoid; }
@@ -109,7 +113,7 @@ const CSS = `
   .skill-desc { font-size: 10px; color: #444; margin-top: 1px; }
 
   /* Projects */
-  .project-name { font-size: 12px; font-weight: 700; color: #0066cc; }
+  .project-name { font-size: 12px; font-weight: 700; color: #111; }
   .project-urls { display: flex; gap: 8px; margin-top: 4px; flex-wrap: wrap; }
   .project-urls a { font-size: 9px; color: #0066cc; }
 
@@ -206,7 +210,7 @@ export function buildHtml(data: TemplateData): string {
     </div>
 
     <!-- PROJECTS -->
-    <div class="card">
+    <div class="card card-breakable">
       ${sectionTitle("⌨", "Projects")}
       ${projects.projectsItems
         .map(
@@ -225,7 +229,6 @@ export function buildHtml(data: TemplateData): string {
           </div>
           ${item.skills?.length ? `<div class="chips">${skillChips(item.skills, skillChipColors)}</div>` : ""}
           <div style="margin-top:5px">${bulletLines(item.description)}</div>
-          ${item.urls?.length ? `<div class="project-urls">${item.urls.map((u: { type: string; url: string }) => `<a href="${escHtml(u.url)}">${escHtml(u.type)}</a>`).join("")}</div>` : ""}
         </div>`,
         )
         .join("")}
