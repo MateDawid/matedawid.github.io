@@ -3,9 +3,9 @@ import path from "path";
 import fs from "fs";
 import { buildHtml } from "./html-builder";
 
-const dataDir = path.join(__dirname, "../src/data");
-const mediaDir = path.join(__dirname, "../public/media");
-const outputPath = path.join(__dirname, "../public/media/resume.pdf");
+const dataDir = path.join(__dirname, "../data");
+const mediaDir = path.join(__dirname, "../../public/media");
+const outputPath = path.join(__dirname, "../../public/media/resume.pdf");
 
 const profile = JSON.parse(
   fs.readFileSync(path.join(dataDir, "profile_card.json"), "utf8"),

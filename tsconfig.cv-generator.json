@@ -3,10 +3,10 @@
   "compilerOptions": {
     "module": "CommonJS",
     "moduleResolution": "Node",
-    "outDir": "./cv-generator/dist",
+    "outDir": "./src/cv-generator/dist",
     "noEmit": false,
     "jsx": "react",
     "esModuleInterop": true
   },
-  "include": ["cv-generator"]
+  "include": ["src/cv-generator", "src/data"]
 }

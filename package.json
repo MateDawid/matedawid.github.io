@@ -26,7 +26,7 @@
     "eject": "react-scripts eject",
     "prettier:check": "npx prettier . --check",
     "prettier:fix": "npx prettier . --write",
-    "generate-pdf": "ts-node --project tsconfig.cv-generator.json cv-generator/generate-pdf.ts"
+    "generate-pdf": "ts-node --project tsconfig.cv-generator.json src/cv-generator/generate-pdf.ts"
   },
   "eslintConfig": {
     "extends": [
