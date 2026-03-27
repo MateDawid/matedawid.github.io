@@ -41,7 +41,9 @@ public/
 All personal data is stored in `src/data/*.json`. Edit those files to make the site your own — no TypeScript changes required.
 
 ### `profile_card.json`
+
 Your name, photo, job title, location, and contact links.
+
 ```json
 {
   "name": "Your Name",
@@ -58,7 +60,9 @@ Your name, photo, job title, location, and contact links.
 ```
 
 ### `about_card.json`
+
 A short professional summary paragraph.
+
 ```json
 {
   "summary": "Your professional summary text here."
@@ -66,7 +70,9 @@ A short professional summary paragraph.
 ```
 
 ### `experience_card.json`
+
 List of work experience entries. `company_image` should be a path under `public/media/`. `skills` values are matched against `skill_chip_colors.json` for coloured chips.
+
 ```json
 {
   "experienceItems": [
@@ -84,7 +90,9 @@ List of work experience entries. `company_image` should be a path under `public/
 ```
 
 ### `projects_card.json`
+
 Personal or open-source projects. Supported `urls` types: `"GitHub"`, `"Demo"`, `"Documentation"`, `"PyPi"`.
+
 ```json
 {
   "projectsItems": [
@@ -95,7 +103,7 @@ Personal or open-source projects. Supported `urls` types: `"GitHub"`, `"Demo"`, 
       "image": "/media/project_screenshot.gif",
       "urls": [
         { "type": "GitHub", "url": "https://github.com/you/project" },
-        { "type": "Demo",   "url": "https://your-demo.com" }
+        { "type": "Demo", "url": "https://your-demo.com" }
       ]
     }
   ]
@@ -103,7 +111,9 @@ Personal or open-source projects. Supported `urls` types: `"GitHub"`, `"Demo"`, 
 ```
 
 ### `education_card.json`
+
 University degrees. `university_image` is a path under `public/media/`.
+
 ```json
 {
   "educationItems": [
@@ -120,7 +130,9 @@ University degrees. `university_image` is a path under `public/media/`.
 ```
 
 ### `skills_card.json`
+
 Technical skills with a short description and icon image.
+
 ```json
 {
   "skills": [
@@ -134,7 +146,9 @@ Technical skills with a short description and icon image.
 ```
 
 ### `interests_card.json`
+
 Personal interests shown in the website and PDF. `icon` is a [MUI icon name](https://mui.com/material-ui/material-icons/) used in the web app; `pdf_icon` is an emoji used in the generated PDF.
+
 ```json
 {
   "interests": [
@@ -149,16 +163,20 @@ Personal interests shown in the website and PDF. `icon` is a [MUI icon name](htt
 ```
 
 ### `skill_chip_colors.json`
+
 Maps skill names to hex colours used for chips in the Experience and Projects cards (both web and PDF).
+
 ```json
 {
   "Python": "#306998",
-  "React":  "#61DAFB"
+  "React": "#61DAFB"
 }
 ```
 
 ### `gdpr_clause.json`
+
 GDPR consent clause printed at the bottom of the PDF resume.
+
 ```json
 {
   "clause": "I agree to the processing of personal data..."
@@ -166,6 +184,7 @@ GDPR consent clause printed at the bottom of the PDF resume.
 ```
 
 ### Adding images
+
 Place any images referenced in the JSON files inside `public/media/`. The PDF generator reads them from the same folder and embeds them as base64 data URIs.
 
 ---
@@ -178,12 +197,14 @@ yarn start        # Start dev server at http://localhost:3000
 ```
 
 ### Type checking & formatting
+
 ```bash
 yarn tsc
 yarn prettier:check
 ```
 
 ### Generate PDF resume locally
+
 ```bash
 yarn generate-pdf   # Outputs to public/media/resume.pdf
 ```
@@ -193,10 +214,12 @@ yarn generate-pdf   # Outputs to public/media/resume.pdf
 ## Deploying
 
 1. Run pre-build checks:
+
 ```bash
 yarn tsc
 yarn prettier:check
 ```
+
 2. Commit and push to `main`
 3. GitHub Actions will automatically:
    - Generate the PDF resume (`yarn generate-pdf`)
