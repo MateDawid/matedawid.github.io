@@ -2,17 +2,12 @@ import { Typography, CardContent, Stack } from "@mui/material";
 import { gradientText } from "./utils";
 import BuildIcon from "@mui/icons-material/Build";
 import { skills_card_data as data } from "../data";
+import { SkillItem } from "../data/types";
 import {
   StyledSkillsCard,
   SkillIconCircle,
   SkillIcon,
 } from "./SkillsCard.style";
-
-type SkillItem = {
-  name: string;
-  description: string;
-  image: string;
-};
 
 const SkillRow: React.FC<{ skill: SkillItem }> = ({ skill }) => (
   <Stack direction="row" spacing={2}>

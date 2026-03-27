@@ -3,17 +3,20 @@
     {
       "name": "Books",
       "description": "I read practically everything, but I have a soft spot for fantasy and science fiction.",
-      "icon": "MenuBook"
+      "icon": "MenuBook",
+      "pdf_icon": "📚"
     },
     {
       "name": "Computer Games",
       "description": "Recently I play soulslikes the most, but RPGs and rougelites are also something special for me.",
-      "icon": "SportsEsports"
+      "icon": "SportsEsports",
+      "pdf_icon": "🎮"
     },
     {
       "name": "Calisthenics & Rucking",
       "description": "My strenght and cardio combination for longevity that keeps me healthy and mentally resilient.",
-      "icon": "FitnessCenter"
+      "icon": "FitnessCenter",
+      "pdf_icon": "🏋️"
     }
   ]
 }

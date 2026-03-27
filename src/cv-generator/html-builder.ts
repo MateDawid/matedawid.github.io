@@ -1,19 +1,32 @@
+import {
+  ProfileCardData,
+  AboutCardData,
+  ExperienceCardData,
+  ExperienceItem,
+  ProjectsCardData,
+  ProjectItem,
+  EducationCardData,
+  EducationItem,
+  SkillsCardData,
+  SkillItem,
+  InterestsCardData,
+  InterestItem,
+  GdprClauseData,
+} from "../data/types";
+
 export interface TemplateData {
-  profile: Record<string, any>;
-  about: Record<string, any>;
-  experience: Record<string, any>;
-  projects: Record<string, any>;
-  education: Record<string, any>;
-  skills: Record<string, any>;
-  interests: Record<string, any>;
+  profile: ProfileCardData;
+  about: AboutCardData;
+  experience: ExperienceCardData & {
+    skill_chip_colors?: Record<string, string>;
+  };
+  projects: ProjectsCardData;
+  education: EducationCardData;
+  skills: SkillsCardData;
+  interests: InterestsCardData;
+  gdpr: GdprClauseData;
   imgSrc: (relativePath: string) => string;
 }
-
-const interestIconMap: Record<string, string> = {
-  MenuBook: "📚",
-  SportsEsports: "🎮",
-  FitnessCenter: "🏋️",
-};
 
 function escHtml(str: string | undefined | null): string {
   if (str == null) return "";
@@ -144,6 +157,7 @@ export function buildHtml(data: TemplateData): string {
     education,
     skills,
     interests,
+    gdpr,
     imgSrc,
   } = data;
   const skillChipColors: Record<string, string> =
@@ -187,15 +201,7 @@ export function buildHtml(data: TemplateData): string {
       ${sectionTitle("⚡", "Experience")}
       ${experience.experienceItems
         .map(
-          (item: {
-            position: string;
-            start_date: string;
-            end_date?: string;
-            company_name: string;
-            company_image?: string;
-            skills?: string[];
-            description: string;
-          }) => `
+          (item: ExperienceItem) => `
         <div class="item">
           <div class="item-row">
             ${item.company_image && imgSrc(item.company_image) ? `<img class="item-img" src="${imgSrc(item.company_image)}" alt="${escHtml(item.company_name)}"/>` : ""}
@@ -219,14 +225,7 @@ export function buildHtml(data: TemplateData): string {
       ${sectionTitle("⌨", "Projects")}
       ${projects.projectsItems
         .map(
-          (item: {
-            name: string;
-            start_date?: string;
-            end_date: string;
-            skills?: string[];
-            description: string;
-            urls?: { type: string; url: string }[];
-          }) => `
+          (item: ProjectItem) => `
         <div class="item">
           <div class="item-header">
             <span class="project-name">${escHtml(item.name)}</span>
@@ -244,14 +243,7 @@ export function buildHtml(data: TemplateData): string {
       ${sectionTitle("🎓", "Education")}
       ${education.educationItems
         .map(
-          (item: {
-            degree: string;
-            start_date: string;
-            end_date?: string;
-            field_of_study: string;
-            university_name: string;
-            university_image?: string;
-          }) => `
+          (item: EducationItem) => `
         <div class="item">
           <div class="item-row">
             ${item.university_image && imgSrc(item.university_image) ? `<img class="item-img" src="${imgSrc(item.university_image)}" alt="${escHtml(item.university_name)}"/>` : ""}
@@ -278,7 +270,7 @@ export function buildHtml(data: TemplateData): string {
       ${sectionTitle("🔧", "Skills")}
       ${skills.skills
         .map(
-          (s: { name: string; description: string; image?: string }) => `
+          (s: SkillItem) => `
         <div class="skill-item">
           <div class="skill-row">
             ${s.image && imgSrc(s.image) ? `<img class="skill-img" src="${imgSrc(s.image)}" alt="${escHtml(s.name)}"/>` : ""}
@@ -297,10 +289,10 @@ export function buildHtml(data: TemplateData): string {
       ${sectionTitle("⭐", "Interests")}
       ${interests.interests
         .map(
-          (i: { name: string; description: string; icon: string }) => `
+          (i: InterestItem) => `
         <div class="interest-item">
           <div class="interest-row">
-            <span class="interest-icon">${interestIconMap[i.icon] ?? "⭐"}</span>
+            <span class="interest-icon">${i.pdf_icon ?? "⭐"}</span>
             <div>
               <div class="interest-name">${escHtml(i.name)}</div>
               <div class="interest-desc">${escHtml(i.description)}</div>
@@ -313,7 +305,7 @@ export function buildHtml(data: TemplateData): string {
 
   </div>
 </div>
-<div class="gdpr">I agree to the processing of personal data provided in this document for realising the recruitment process pursuant to the Personal Data Protection Act of 10 May 2018 (Journal of Laws 2018, item 1000) and in agreement with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (General Data Protection Regulation).</div>
+<div class="gdpr">${escHtml(gdpr.clause)}</div>
 </body>
 </html>`;
 }

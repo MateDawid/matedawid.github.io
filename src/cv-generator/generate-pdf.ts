@@ -28,6 +28,9 @@ const skills = JSON.parse(
 const interests = JSON.parse(
   fs.readFileSync(path.join(dataDir, "interests_card.json"), "utf8"),
 );
+const gdpr = JSON.parse(
+  fs.readFileSync(path.join(dataDir, "gdpr_clause.json"), "utf8"),
+);
 
 function imgSrc(relativePath: string): string {
   const filename = relativePath.replace(/^\/media\//, "");
@@ -52,6 +55,7 @@ const html = buildHtml({
   education,
   skills,
   interests,
+  gdpr,
   imgSrc,
 });
 

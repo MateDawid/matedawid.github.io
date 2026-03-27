@@ -1,4 +1,4 @@
-type EducationItem = {
+export type EducationItem = {
   degree: string;
   field_of_study: string;
   university_name: string;
