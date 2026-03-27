@@ -2,9 +2,9 @@ import { styled } from "@mui/material/styles";
 import { Box, Card } from "@mui/material";
 
 export const StyledEducationCard = styled(Card)({
-  borderColor: "rgba(255,167,38,0.25)",
+  borderColor: "rgba(92,107,192,0.25)",
   background:
-    "radial-gradient(800px circle at 0% 0%, rgba(255,167,38,0.10), transparent 40%), rgba(255,255,255,0.02)",
+    "radial-gradient(800px circle at 0% 0%, rgba(92,107,192,0.10), transparent 40%), rgba(255,255,255,0.02)",
 });
 
 export const UniversityImageBox = styled(Box)({

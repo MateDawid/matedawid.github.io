@@ -13,8 +13,8 @@ export const EducationCard: React.FC = () => (
   <StyledEducationCard>
     <CardContent>
       <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 2 }}>
-        <SchoolIcon sx={{ color: "#ffa726" }} />
-        <Typography variant="h6" sx={gradientText("#ffa726", "#ffcc02")}>
+        <SchoolIcon sx={{ color: "#5c6bc0" }} />
+        <Typography variant="h6" sx={gradientText("#5c6bc0", "#9fa8da")}>
           Education
         </Typography>
       </Stack>

@@ -25,7 +25,7 @@ const App: React.FC = () => {
             <Grid size={{ xs: 12, md: 7 }} sx={{ display: "flex" }}>
               <AboutCard />
             </Grid>
-            <Grid size={{ xs: 12, md: 8 }}>
+            <Grid size={{ xs: 12, md: 7 }}>
               <Grid container spacing={2}>
                 <Grid size={12}>
                   <ExperienceCard />
@@ -33,14 +33,12 @@ const App: React.FC = () => {
                 <Grid size={12}>
                   <ProjectsCard />
                 </Grid>
-                <Grid size={12}>
-                  <EducationCard />
-                </Grid>
               </Grid>
             </Grid>
-            <Grid size={{ xs: 12, md: 4 }}>
+            <Grid size={{ xs: 12, md: 5 }}>
               <Stack spacing={2}>
                 <SkillsCard />
+                <EducationCard />
                 <InterestsCard />
               </Stack>
             </Grid>
