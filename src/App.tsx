@@ -11,6 +11,9 @@ import {
 } from "./components";
 import { theme } from "./theme";
 import { AppBackground, AppContainer } from "./App.style";
+import { profile_card_data as profile } from "./data";
+
+document.title = `${profile.name} | CV`;
 
 const App: React.FC = () => {
   return (
